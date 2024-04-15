@@ -5,6 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = trim($_POST["name"]);
     $email = trim($_POST["email"]);
     $desc = trim($_POST["desc"]);   
+    $admin = "admin@balibkvilla.com"
     $errors = array();
     if (empty($name)) {
         $errors["name"] = "Name is required";
@@ -19,13 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }   
     if (empty($errors)) {
        
-        $to = "balaganesansr@gmail.com";       
-        $subject = "New form submission";       
+        $to = "bali.bkvilla@gmail.com";       
+        $subject = "Enquiry Mail";       
         $message = "Name: $name\n";
         $message .= "Email: $email\n";
         $message .= "Description:\n$desc\n";       
-        $headers = "From: $email" . "\r\n" .
-            "Reply-To: $email" . "\r\n" .
+        $headers = "From: $admin" . "\r\n" .
             "X-Mailer: PHP/" . phpversion();       
         if (mail($to, $subject, $message, $headers)) {
            

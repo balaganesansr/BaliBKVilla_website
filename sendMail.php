@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // If there are no validation errors, send the email
     if (empty($errors)) {
         // Set recipient email address
-        $to = "recipient@example.com";
+        $to = "balaganesansr@gmail.com";
 
         // Set subject
         $subject = "New form submission";

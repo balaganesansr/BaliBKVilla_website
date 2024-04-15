@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = trim($_POST["name"]);
     $email = trim($_POST["email"]);
     $desc = trim($_POST["desc"]);   
-    $admin = "admin@balibkvilla.com"
+    $admin = "admin@balibkvilla.com";
     $errors = array();
     if (empty($name)) {
         $errors["name"] = "Name is required";
